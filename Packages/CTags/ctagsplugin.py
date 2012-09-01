@@ -341,6 +341,12 @@ def files_to_search(view, tags_file, multiple=True):
 
     return files
 
+def get_current_file_suffix(view):
+    current = view.file_name()
+    fileName, fileExtension = os.path.splitext(current)
+    return fileExtension
+
+
 ############################### JUMPBACK COMMANDS ##############################
 
 def different_mod_area(f1, f2, r1, r2):
@@ -559,14 +565,19 @@ class ShowSymbols(sublime_plugin.TextCommand):
     @ctags_goto_command()
     def run(self, view, args, tags_file, tags):
         if not tags_file: return
-        multi = args.get('type') =='multi'
+        multi = args.get('type') == 'multi'
+        lang = args.get('type') == 'lang'
 
+     
+        suffix = get_current_file_suffix(view)
         files = files_to_search(view, tags_file, multi)
-        if not files: return
 
         tags_file = tags_file + '_sorted_by_file'
-        tags = (TagFile(tags_file, FILENAME)
-                       .get_tags_dict(*files, filters=compile_filters(view)))
+
+        loaded = TagFile(tags_file, FILENAME)
+        if lang: tags = loaded.get_tags_dict_by_suffix(suffix, filters=compile_filters(view))
+        else: tags = loaded.get_tags_dict(*files, filters=compile_filters(view))
+
         if not tags:
             if multi:
                 view.run_command('show_symbols', {'type':'multi'})
