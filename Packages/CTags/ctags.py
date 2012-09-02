@@ -218,7 +218,6 @@ class TagFile(object):
             self.fh = mmap.mmap(fh.fileno(), 0)
 
             for tag in (t.encode() for t in tags):
-                print "searching for tag: " + tag
                 b4 = bisect.bisect_left(self, tag)
                 fh.seek(b4)
 
