@@ -1,9 +1,8 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Pastels on Dark.tmTheme",
 	"font_size": 13.0,
 	"ignored_packages":
 	[
-		"SublimeBlockCursor"
 	],
 	"vintage_start_in_command_mode": true
 }

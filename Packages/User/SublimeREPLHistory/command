@@ -1,0 +1,9 @@
+-a = 1
+-a
+-a = 2
+-a
+-def foo(a) adsfsadf
+-val foo = 2
+-foo
+-List(1, 2, 3) map (_ + 1)
+-/Users/dyross/lib/scala-2.8.2.final
