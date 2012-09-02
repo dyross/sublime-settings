@@ -1,0 +1,7 @@
+{
+    "cmd": ["/opt/local/bin/sbt compile"],
+    "file_regex": "^\\[error\\] ([.a-zA-Z0-9/-]+[.]scala):([0-9]+):",
+    "selector": "source.scala",
+    "working_dir": "${project_path:${folder}}",
+    "shell": "true"
+}
