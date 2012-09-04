@@ -1,11 +1,12 @@
 {
-	"auto_upgrade_last_run": 1346620244,
+	"auto_upgrade_last_run": 1346771920,
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"CTags",
-		"Git",
 		"Package Control",
 		"Play 2.0",
+		"Pretty JSON",
 		"SublimeREPL",
 		"VintageEx"
 	]

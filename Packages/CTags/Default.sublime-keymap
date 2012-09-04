@@ -56,7 +56,7 @@
         "operator": "equal"
       }
     ], 
-    "keys": ["ctrl+t", "ctrl+s"]
+    "keys": ["ctrl+alt+shift+s"]
   },
   { // override current default
     "command": "transpose",

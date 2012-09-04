@@ -1,6 +1,6 @@
 {
     "debug"           :  false,
-    "ctags_command"   :  "/opt/local/bin/ctags -R -f .tags",
+    "ctags_command"   :  "/usr/local/bin/ctags -R -f .tags",
     "filters"         :  {
         "source.python": {"type":"^i$"}
     },
