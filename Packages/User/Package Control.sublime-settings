@@ -1,9 +1,11 @@
 {
-	"auto_upgrade_last_run": 1346771920,
+	"auto_upgrade_last_run": 1346819595,
 	"installed_packages":
 	[
 		"All Autocomplete",
 		"CTags",
+		"LiveReload",
+		"Markdown Preview",
 		"Package Control",
 		"Play 2.0",
 		"Pretty JSON",
