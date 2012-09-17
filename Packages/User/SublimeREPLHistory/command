@@ -7,3 +7,57 @@
 -foo
 -List(1, 2, 3) map (_ + 1)
 -/Users/dyross/lib/scala-2.8.2.final
+-new Array[Byte](2)
+-Array[Byte](2)
+-new Array[Byte]
+-new Array[Byte](13252)
+-case class Kv(key: String, value: String)
+-val thing = Some(List(Kv("a", "b"), Kv("c", "d")))
+-for (t <- thing; tt <- thing if tt.key == "a") yield tt.value
+- for (t <- thing; tt <- t if tt.key == "a") yield tt.value
+- for (t <- thing.toList; tt <- t if tt.key == "a") yield tt.value
+-for (t <- thing.toList; tt <- t if tt.key == "a") yield tt.value.headOption
+-for (t <- thing; tt <- t if tt.key == "a"; ttt <- tt.headOption) yield ttt.value
+-for (t <- thing; tt <- t if tt.key == "a") yield tt.value
+-for (t <- thing.toList; tt <- t if tt.key == "a"; ttt <- tt) yield tt.value
+-for (t <- thing; tt <- t) yield tt
+-for (t <- thing; tt <- t.headOption) yield tt
+-for (t <- thing; tt <- t.headOption) yield tt.value
+- <- thing; tt <- t.headOption) yield tt
+-for (t <- thing; tt <- t.headOption) yield tt
+-for (t <- thing; tt <- t.headOption if t.key == "a") yield tt
+-for (t <- thing; tt <- t.headOption if tt.key = "a'") yield tt
+-for (t <- thing; tt <- t.headOption if tt.key == "a") yield tt
+-- thing; tt <- t.headOption if tt.key == "a") yield tt\nscala>
+-for (t <- thing; tt <- t.headOption if tt.key == "b") yield tt
+-for (t <- thing; tt <- t.headOption if tt.key == "class") yield tt
+-for (t <- thing; tt <- t.headOption if tt.key == "c") yield tt
+-for (t <- thing; tt <- t if tt.key == "a"; ttt <- tt.headOption) yield ttt
+-thing flatMap { t =>}
+-thing flatMap { t => t filter }
+-for (t <- thing; tt <- t.headOption if tt.key == "a") yield tt
+-thing flatMap { t => t filter (_.key == "a")}
+-       ^\nfor (t <- thing; tt <- t.headOption if tt.key == "a") yield tt\nscala>
+-thing flatMap { t => t filter (_.key == "a") headOption }
+-thing flatMap { t => t filter (_.key == "c") headOption }
+-thing flatMap { t => t filter (_.key == "d") headOption }
+-import javax.security._
+-import javax.security.Base64
+-import org.apache.commons.codec.binary
+-val SplitWithUnderscore = "(.+)_(.+)".rsdfsda
+-tWithUnderscore = "(.+)_(.+)".r\nscala>
+-val SplitWithUnderscore = "(.+)_(.+)".r
+-def foo(s: String) = s match { }
+-def foo(s: String) = s match {
+-case SplitWithUnderscore(a, b) => (a, b)
+-}
+-foo("a")
+-foo("a_b")
+-foo("a_")
+-foo("3245235_q54323532_5234532")
+-def foo(s:String) = s split "_" match {}
+-def foo(s:String) = s split "_" match {
+-case Array(a, b) => (a, b)
+-}
+-foo("a")
+-foo("a_b")
