@@ -1,9 +1,9 @@
 {
     "debug"           :  false,
-    "ctags_command"   :  "ctags -R -f .tags",
     "filters"         :  {
         "source.python": {"type":"^i$"}
     },
+    "ctags_command"   :  "/usr/local/bin/ctags -R -f .tags",
     "definition_filters": {
         "source.php": {"type":"^v$"}
     },

@@ -17,9 +17,12 @@ from os.path import dirname
 ################################################################################
 
 TAGS_RE = re.compile (
+
     '(?P<symbol>[^\t]+)\t'
     '(?P<filename>[^\t]+)\t'
-    '(?P<ex_command>.*)'
+    '(?P<ex_command>.*?);"\t'
+    '(?P<type>[^\t\r\n]+)'
+    '(?:\t(?P<fields>.*))?'
 )
 
 # Column indexes
@@ -435,3 +438,4 @@ if __name__ == '__main__':
 # value the name declared for that construct in the program. This scope entry
 # indicates the scope in which the tag was found. For example, a tag generated
 # for a C structure member would have a scope looking like "struct:myStruct".myStruct".
+
