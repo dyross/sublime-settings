@@ -10,7 +10,7 @@
     },
 
     {
-		"keys": ["super+alt+left"],
+		"keys": ["super+ctrl+left"],
 		"command": "set_layout",
 		"args":
 		{
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-		"keys": ["super+alt+right"],
+		"keys": ["super+ctrl+right"],
 		"command": "set_layout",
 		"args":
 		{
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-		"keys": ["super+alt+up"],
+		"keys": ["super+ctrl+up"],
 		"command": "set_layout",
 		"args":
 		{
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-		"keys": ["super+alt+down"],
+		"keys": ["super+ctrl+down"],
 		"command": "set_layout",
 		"args":
 		{
