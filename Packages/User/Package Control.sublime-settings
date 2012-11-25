@@ -1,14 +1,17 @@
 {
-	"auto_upgrade_last_run": 1352835124,
+	"auto_upgrade_last_run": 1353861551,
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Clipboard History",
 		"CTags",
 		"LiveReload",
 		"Markdown Preview",
 		"Package Control",
+		"PlainTasks",
 		"Play 2.0",
 		"Pretty JSON",
+		"SideBarEnhancements",
 		"SublimeREPL",
 		"VintageEx"
 	]

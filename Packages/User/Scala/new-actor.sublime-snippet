@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+class ${1:SomeClass} extends Actor {
+	
+	override def receive = {
+		case ${2:_} => ${3:Unit}
+	}	
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>actor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
