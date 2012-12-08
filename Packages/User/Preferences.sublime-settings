@@ -1,9 +1,10 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Pastels on Dark.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/Revelation.tmTheme",
 	"font_size": 13.0,
 	"ignored_packages":
 	[
 	],
+	"theme": "Soda Light.sublime-theme",
 	"vintage_start_in_command_mode": true,
 	"word_wrap": true
 }

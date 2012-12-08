@@ -1,18 +1,20 @@
 {
-	"auto_upgrade_last_run": 1353861551,
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"AdvancedNewFile",
-		"Clipboard History",
+		"Color Schemes by carlcalderon",
 		"CTags",
+		"Dark Pastel Color Scheme",
+		"Dayle Rees Color Schemes",
+		"Git",
 		"LiveReload",
 		"Markdown Preview",
 		"Package Control",
 		"PlainTasks",
 		"Play 2.0",
 		"Pretty JSON",
-		"SideBarEnhancements",
 		"SublimeREPL",
+		"Theme - Soda",
 		"VintageEx"
 	]
 }
