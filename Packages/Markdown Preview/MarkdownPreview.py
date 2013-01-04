@@ -8,6 +8,7 @@ import re
 import json
 import urllib2
 
+
 settings = sublime.load_settings('MarkdownPreview.sublime-settings')
 
 
@@ -22,7 +23,7 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
     """ update the output html when markdown file has already been converted once """
 
     def on_post_save(self, view):
-        if view.file_name().endswith(('.md', '.markdown', '.mdown')):
+        if view.file_name().endswith(tuple(settings.get('markdown_filetypes', (".md", ".markdown", ".mdown")))):
             temp_file = getTempMarkdownPreviewPath(view)
             if os.path.isfile(temp_file):
                 # reexec markdown conversion
@@ -106,7 +107,13 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
                 sublime.status_message('converted markdown with github API successfully')
         else:
             # convert the markdown
-            markdown_html = markdown2.markdown(contents, extras=['footnotes', 'toc', 'fenced-code-blocks', 'cuddled-lists', 'code-friendly'])
+            markdown_html = markdown2.markdown(contents, extras=['footnotes', 'toc', 'fenced-code-blocks', 'cuddled-lists'])
+            toc_html = markdown_html.toc_html
+            if toc_html:
+                toc_markers = ['[toc]', '[TOC]', '<!--TOC-->']
+                for marker in toc_markers:
+                    markdown_html = markdown_html.replace(marker, toc_html)
+
             # postprocess the html
             markdown_html = self.postprocessor(markdown_html)
 
@@ -149,6 +156,7 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
             # build the html
             html_contents = markdown_html
             new_view = self.view.window().new_file()
+            new_view.set_scratch(True)
             new_edit = new_view.begin_edit()
             new_view.insert(new_edit, 0, html_contents)
             new_view.end_edit(new_edit)

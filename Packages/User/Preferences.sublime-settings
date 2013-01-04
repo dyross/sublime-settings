@@ -2,6 +2,9 @@
 	"color_scheme": "Packages/Color Scheme - User/Revelation-dyross.tmTheme",
 	"font_face": "Inconsolata-dz",
 	"font_size": 13.0,
+	"ignored_packages":
+	[
+	],
 	"theme": "Soda Light.sublime-theme",
 	"vintage_start_in_command_mode": true,
 	"word_wrap": true
